@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .login-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Add your login logic here
+            // For example, you can send a request to your server to verify the credentials
+            // or check if the username and password match a hardcoded value
+            // For this example, we'll just log the values to the console
+            console.log(`Username: ${username}, Password: ${password}`);
+
+            // Open the transaction page
+            window.location.href = 'hdfc.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDFC Bank - Personal Banking</title>
+  <link rel="shortcut icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAe1BMVEXtIyr///8ATI/vTVHtHybuOj/vR0v72NnsAAnsAAT609TsBBP84eL4t7n4wMHuO0HwYWXtGiKarMcAQoqCmLrh5u4AOofY4Or++PjuNzzsERv60NH+9fXwXGD1mZv1oKHv8vYALoLuLDP5xMXxa28AMoN5kbb2qqvwVlq0k2IzAAACMElEQVR4nO3d3VLCMBBA4VTENKgg/mBbQFBA+/5PqPeGmdTsdiNzzgPs7nfbmbZuO9Fv4avmd5VfjLB766bX+gVfxfJhhN3tj9CpV58R1vqrr6cIRUKoGEKhECqGUCiEiiEUCqFiCIVCqBhCoRAqhlAohIohFAqhYgiFQqgYQqEQKoZQKISKIRTqXwi7OqMwiwtDztBOVti9+dnfW2+iws06Y6bfJRGThbf30RstO9xeunCOECFC8xAiRGgfQoQI7UOIEKF9CBEitA8hQoT2IUSI0D6ECBHahxAhQvuMhPvH/PZFC1/en3J7fy1buLrKbYUQIUKECBEiRIgQIUKECBEiRBgTtsuUL7nWBQrrlMOXrZtMFwl9zIsTHj5SDp9OXNq41EYUpuYa0XHlCRuEA0OIEOHwEA4NIUKEw0M4NIQIEQ4P4dAQItQQio4rUFi540NK/aE44bpPuvzo2mVKocAnwiHp8tS/kv3np/oIESJEiBAhQoQIESJEiBAhQoQR4Sn7DctT2cL953Nuny9FC0cMIUKE9iFEiNA+hAgR2ocQIUL7ECJEaB9ChAjtQ4gQoX0IESK0DyFChPZdvlD47/Hd7i6n+CuATdbMr05U6LqQ0ywq9Fkzk4ADhFnVPi6s9VcjFAqhYgiFQqgYQqEQKoZQKISKIRQKoWIIhUKoGEKhECqGUCiEiiEUCqFiCIVCqBhCoRAqhlAoa6F+4YwwjLC7df2Nfq2vmt9Vvh1hd/8NC+gAazTwAwsAAAAASUVORK5CYII="
+    type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="fixedexample">
+
+  </div>
+  <section id="firsttier">
+
+    <div class="header">
+      <div id="logo">
+        <img
+          src="data:image/png;base64,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"
+          alt="">
+      </div>
+      <div id="pages">
+        <a href="#" class="active">Personal</a>
+        <a href="#">NRI</a>
+        <a href="#">SME</a>
+        <a href="#">Wholesale</a>
+        <a href="#">Agri</a>
+      </div>
+      <div id="links">
+        <a href="#">Locate us</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+
+    <div id="welcome">
+      <h1>Welcome!</h1>
+    </div>
+
+    <div id="main-top-container">
+      <div id="main-img-div">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="">
+      </div>
+      <div id="form-div">
+        <div>
+          <h2>Personal Banking Services <b>What Are You Looking For?</b></h2>
+          <select>
+            <option value="Loans">Loans</option>
+            <option value="Select">Select Product Type</option>
+            <option value="Cards">Cards</option>
+            <option value="Accounts">Accounts</option>
+            <option value="Deposits">Deposits</option>
+            <option value="Loans">Loans</option>
+            <option value="EMI">EMI</option>
+          </select>
+          <select>
+            <option value="Personal Loan">Personal Loan</option>
+            <option value="Select">Select Product</option>
+            <option value="Personal Loan">Personal Loan</option>
+            <option value="Paperless Personal Loan">Paperless Personal Loan</option>
+            <option value="Loan on Credit Card">Loan on Credit Card</option>
+            <option value="SmartEMI">SmartEMI</option>
+            <option value="New Car Loan">New Car Loan</option>
+          </select>
+          <button>APPLY ONLINE</button>
+          <a href="#">Know More</a>
+        </div>
+        <div>
+          <h2>
+            Watch Video - Get PL in 5 easy steps
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <marquee>World Investor Week October 10 - 16, 2022 being Celebrated under aegis of IOSCO and SEBI. विश्व निवेशक
+      सप्ताह 10-16 अक्तूबर, 2022 - आयस्को तथा सेबी की छत्रछाया में मनाया जा रहा है! </marquee>
+
+    <div id="navbar">
+
+      <a class="active" href="#">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">Pay</a></button>
+        <div class="dropdown-content" id="drop1">
+          <div class="drop-container">
+
+            <div>
+              <h2>Money Transfer</h2>
+              <a href="#">UPI</a>
+              <a href="#">IMPS</a>
+              <a href="#">RTGC</a>
+              <a href="#">NEFT</a>
+              <a href="#">Remit Now</a>
+              <a href="#">Remitance</a>
+              <a href="#">Visa Card</a>
+            </div>
+            <div>
+              <h2>Cards</h2>
+              <a href="#">Credit Cards</a>
+              <a href="#">Debit Cards</a>
+              <a href="#">Prepaid Cards</a>
+              <a href="#">Forex Cards</a>
+              <a href="#">Commercial Credit Cards</a>
+              <a href="#">Milinia Cards</a>
+              <a href="#">Bussiness Credit Cards</a>
+            </div>
+            <div>
+              <h2>Bill Payments</h2>
+              <a href="#">Electricity Bill Payment</a>
+              <a href="#">Mobile Post Paid</a>
+              <a href="#">Insurance Primium</a>
+              <a href="#">Telephone Landline</a>
+              <a href="#">Gas</a>
+              <a href="#">Water</a>
+            </div>
+            <div>
+              <h2>
+                Recharge
+              </h2>
+              <a href="#">Broadband & Data Card</a>
+              <a href="#">Mobile Pre paid Recharge</a>
+              <a href="#">DTH Recharge</a>
+            </div>
+            <div>
+              <h2>Payments Solution</h2>
+              <h2>PayZapp</h2>
+              <h2>FasTag - Toll Payment</h2>
+              <h2>My cards</h2>
+              <h2>cash cheque demand draft</h2>
+              <h2>loan repayment</h2>
+              <h2>taxes</h2>
+              <h2>education fees</h2>
+              <h2>donations</h2>
+              <h2>Stay secure</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">Save</a></button>
+        <div class="dropdown-content" id="drop2">
+          <div class="drop-container">
+
+            <div>
+              <h2>Accounts</h2>
+              <a href="#">Saving accounts</a>
+              <a href="#">Salery Accounts</a>
+              <a href="#">Current Accounts</a>
+              <a href="#">Rural Accounts</a>
+              <a href="#">Public Provident Fund</a>
+              <a href="#">Sukanya Samridji Account</a>
+            </div>
+            <div>
+              <h2>Deposits</h2>
+              <a href="#">Fixed Deposits</a>
+              <a href="#">Non Withdraw Deposits</a>
+              <a href="#">Reccuring Deposits</a>
+            </div>
+            <div>
+              <h2>Save Deposit Locker</h2>
+              <h2>My Passion Fund</h2>
+            </div>
+            <div>
+              <h2>
+                High Network Banking
+              </h2>
+              <a href="#">Wealth</a>
+              <a href="#">Impiria</a>
+              <a href="#">Prefered</a>
+              <a href="#">Classic</a>
+              <a href="#">Prime</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">Invest</a></button>
+        <div class="dropdown-content" id="drop3">
+          <div class="drop-container">
+
+            <div>
+              <h2>Demat</h2>
+              <a href="#">Demat Account Online</a>
+              <a href="#">Corporate Demat Accounts</a>
+              <a href="#">Already Have Demat Accounts and Trading Account</a>
+            </div>
+            <div>
+              <h2>Bonds & Securites</h2>
+              <a href="#">Saving Bonds</a>
+              <a href="#">Sec-54 EC Capital Gains Bonds</a>
+              <a href="#">Sovergine Gold Bonds</a>
+            </div>
+            <div>
+              <h2>Mutual Funds</h2>
+              <h2>investnow</h2>
+              <h2>equities & derivetives</h2>
+              <h2>ipo application through asba</h2>
+            </div>
+            <div>
+              <h2>
+                ipo applications
+              </h2>
+              <h2>recommended portfolio equity and dept mutual fund</h2>
+              <h2>hdfc bank research report</h2>
+            </div>
+            <div>
+              <h2>protect life and grow and welath</h2>
+              <h2>secure childrens future</h2>
+              <h2>deposits</h2>
+              <h2>National pension system</h2>
+              <h2>gold monetiztion scheme</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn"> <a href="#">borrow</a></button>
+        <div class="dropdown-content" id="drop4">
+          <div class="drop-container">
+
+            <div>
+              <h2>Popular loans</h2>
+              <a href="#">Personal Loan</a>
+              <a href="#">Paperlesss Personal Loan</a>
+              <a href="#">Home Loan</a>
+              <a href="#">Bussiness Loan</a>
+              <a href="#">New car Loan</a>
+              <a href="#">Two Whealer Loan</a>
+              <a href="#">Super Bike Loan</a>
+              <a href="#">Eductional Loan</a>
+              <a href="#">Pre-Owned Car Loan</a>
+              <a href="#">EasyEMI Consumer Loan</a>
+              <a href="#">Rural Loan</a>
+              <a href="#">FlexiPay : Buy Now And Pay Later</a>
+              <h2>PayLater On UPI</h2>
+            </div>
+            <div>
+              <h2>Loan Against Assets</h2>
+              <a href="#">Loan On Credit Cards</a>
+              <a href="#">Smart EMI</a>
+              <a href="#">Salary Plus</a>
+              <a href="#">Gold Loan</a>
+              <a href="#">Loan against Securitits</a>
+              <a href="#">Digital Loan Agains Mutual Funds</a>
+              <a href="#">Loan Against Rental Recivables</a>
+              <a href="#">Loan Against Property</a>
+              <a href="#">Loan Againt Cars</a>
+            </div>
+            <div>
+              <h2>Other loans</h2>
+              <h2>jansamarth portal</h2>
+              <a href="#">Emergency Credit Line Facility </a>
+              <a href="#">Loan For Professinals</a>
+              <a href="#">Goverment Sponserd Programs</a>
+              <a href="#">PM Mudra Yojna</a>
+              <a href="#">Stand Up India Scheme</a>
+              <a href="#">Manage Your Loan Account</a>
+              <a href="#">Suistanable Livlyhood initiative</a>
+            </div>
+            <div>
+              <h2>
+                Credit Cards
+              </h2>
+              <h2>
+                Loan Repayment
+              </h2>
+            </div>
+            <div>
+              <h2>Payments Solution</h2>
+              <h2>PayZapp</h2>
+              <h2>FasTag - Toll Payment</h2>
+              <h2>My cards</h2>
+              <h2>cash cheque demand draft</h2>
+              <h2>loan repayment</h2>
+              <h2>taxes</h2>
+              <h2>education fees</h2>
+              <h2>donations</h2>
+              <h2>Stay secure</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">insure</a></button>
+        <div class="dropdown-content" id="drop5">
+          <div class="drop-container">
+
+            <div>
+              <h2>Money Transfer</h2>
+              <a href="#">UPI</a>
+              <a href="#">IMPS</a>
+              <a href="#">RTGC</a>
+              <a href="#">NEFT</a>
+              <a href="#">Remit Now</a>
+              <a href="#">Remitance</a>
+              <a href="#">Visa Card</a>
+            </div>
+            <div>
+              <h2>Cards</h2>
+              <a href="#">Credit Cards</a>
+              <a href="#">Debit Cards</a>
+              <a href="#">Prepaid Cards</a>
+              <a href="#">Forex Cards</a>
+              <a href="#">Commercial Credit Cards</a>
+              <a href="#">Milinia Cards</a>
+              <a href="#">Bussiness Credit Cards</a>
+            </div>
+            <div>
+              <h2>Bill Payments</h2>
+              <a href="#">Electricity Bill Payment</a>
+              <a href="#">Mobile Post Paid</a>
+              <a href="#">Insurance Primium</a>
+              <a href="#">Telephone Landline</a>
+              <a href="#">Gas</a>
+              <a href="#">Water</a>
+            </div>
+            <div>
+              <h2>
+                Recharge
+              </h2>
+              <a href="#">Broadband & Data Card</a>
+              <a href="#">Mobile Pre paid Recharge</a>
+              <a href="#">DTH Recharge</a>
+            </div>
+            <div>
+              <h2>Payments Solution</h2>
+              <h2>PayZapp</h2>
+              <h2>FasTag - Toll Payment</h2>
+              <h2>My cards</h2>
+              <h2>cash cheque demand draft</h2>
+              <h2>loan repayment</h2>
+              <h2>taxes</h2>
+              <h2>education fees</h2>
+              <h2>donations</h2>
+              <h2>Stay secure</h2>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">shop</a></button>
+        <div class="dropdown-content" id="drop6">
+          <div class="drop-container">
+            <div>
+              <h2>Smart buy</h2>
+              <a href="#">Compare & fly</a>
+              <a href="#">Compare & Shop</a>
+              <a href="#">Deals & Offers</a>
+              <a href="#">Smart Buy Hotels</a>
+              <a href="#">Dinning Offers</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn" id="login">LOGIN</button>
+        <div class="dropdown-content" id="login-container">
+          <div class="drop-container" >
+            <div>
+              <h2>NetBanking</h2>
+              <a href="login.html">Know More</a>
+              <hr>
+              <h2>Credit Card Portal</h2>
+              <p>For customers without HDFC Bank A/C</p>
+              <a href="#">Know More</a>
+              <hr>
+              <h2>Loans Portal</h2>
+              <p>For customers without HDFC Bank A/C</p>
+              <a href="#">Know More</a>
+              <hr>
+              <h2>PrePaid/Forex Cards</h2>
+              <a href="#">Register Know More</a>
+              <hr>
+              <h2>Verified by</h2>
+              <p>
+                Visa/MasterCard/SecureCards/Netsafe/Rupay secure
+              </p>
+              <a href="#">Register Know More</a>
+              <hr>
+              <h2>Fastag</h2>
+              <a href="#">Forign IPin</a>
+              <hr>
+              <h2>
+                 Merchant Standing Instruction
+              </h2>
+             
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="container">
+    <div class="box1">
+      <div>
+        <h2>
+          Calculators For Your Needs
+        </h2>
+        <div>
+          <div class="hover">
+            <h2>Personal Loan EMI Calculator</h2>
+            <p>Calculate Your Monthly Outgo With Our Personal Loan EMI Calculator</p>
+          </div>
+          <div class="hover">
+            <h2>
+              Home Loan EMI Calculator
+            </h2>
+            <p>
+              Calculate Your Monthly Expense Toward Owning Your Own Home
+            </p>
+          </div>
+          <div class="hover">
+            <h2>
+              Rd Calculator
+            </h2>
+            <p>
+              Start Small, Save Regularly, Enjoy Great Interest Rates
+            </p>
+          </div>
+          <div>
+            <a href="#">VIEW ALL</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div>
+        <h2>
+          Offers For You
+        </h2>
+        <div>
+          <div>
+            <h3>
+              Assured Savings
+            </h3>
+            <p>
+              on your healthcare Expenses
+            </p>
+          </div>
+          <div>
+            <h3>
+              Bigger Savings Assured
+            </h3>
+            <p>
+              On Smart Buy
+            </p>
+          </div>
+          <div>
+
+
+            <a href="#">VIEW ALL</a>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div>
+        <h2>
+          Need Help?
+        </h2>
+        <div>
+          <a href="#"><b>Contact Us & NetBanking</b></a>
+          <a href="#">Chat On Whatsapp</a>
+          <a href="#">Interest Rates</a>
+          <a href="#">Credit Card Services</a>
+          <a href="#">Report UnAuthorised Transactions</a>
+          <a href="#">Loan Sevice Requests</a>
+          <a href="#">VIEW ALL</a>
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="box2">
+
+<h2>Latest Offers</h2>
+<div>
+  <div>
+    <h3>Travel</h3>
+    <div class="img"></div>
+    <p>
+      Fly with ease this holiday season
+    </p>
+  </div>
+
+
+
+
+  <div>
+    <h3>Elctronics</h3>
+    <div class="img"></div>
+    <p>
+      Avail exiciting offers Via SmartBuy
+    </p>
+  </div>
+
+
+
+
+  <div>
+    <h3>Credit Cards!</h3>
+    <div class="img"></div>
+    <p>
+      Choose from the best in the range today!
+    </p>
+  </div>
+
+
+
+
+  <div>
+<p>
+  Get Exculisive Offers and Countless options from Our Partner
+</p>
+<a href="#">View all</a>
+  </div>
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="box2">
+
+  <h2>Ways To Bank</h2>
+  <div>
+    <div>
+      <h3>Whats app</h3>
+      <div class="img"></div>
+      <p>
+        90+ Banking Services That are a Chat away. Say Hi on 7070022222
+      </p>
+    </div>
+  
+  
+  
+  
+    <div>
+      <h3>SME</h3>
+      <div class="img"></div>
+      <p>
+        The Safest and quickiest way to operate your cash credit account.
+      </p>
+    </div>
+  
+  
+  
+  
+    <div>
+      <h3>MobileBanking</h3>
+      <div class="img"></div>
+      <p>
+        100+ transaction on a variety of phones and Tablets.
+      </p>
+    </div>
+  
+  
+  
+  
+    <div>
+      <h3>Premiere & Wealth</h3>
+      <div class="img"></div>
+  <p>
+    premiar banking to suit every life style. Beshoke wealth Solutions
+  </p>
+    </div>
+  
+  
+  
+  
+  </div>
+  </div>
+
+
+
+  <div class="box3">
+    <h2>
+      Learning Centre
+    </h2>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+
+<div>
+  <h2>
+    About Us
+  </h2>
+  <a href="#">Overview</a>
+  <a href="#">Investor Relations</a>
+  <a href="#">Other Stackholder Information</a>
+  <a href="#">News room</a>
+  <a href="#">Corporate Government</a>
+  <a href="#">Carrers</a>
+  <a href="#">CSR</a>
+  <a href="#">Regulatory Discloures</a>
+</div>
+
+<div>
+  <h2>
+    Usefull Links
+  </h2>
+
+  <a href="#">Privacy</a>
+  <a href="#">Cars Loans BT Tops up </a>
+  <a href="#">Dredit Cards</a>
+  <a href="#">Important Message</a>
+  <a href="#">RBI Kehta H</a>
+  <a href="#">Security</a>
+</div>
+
+<div>
+  <h2>
+    Resourses
+  </h2>
+  <a href="#">Ways To Bank</a>
+  <a href="#">Rates</a>
+  <a href="#">Bank Holiday</a>
+  <a href="#">Glossry</a>
+  <a href="#">Watch Videos</a>
+  <a href="#">Learning Centre</a>
+  <a href="#">Importance Notice</a>
+  <a href="#">Forms Centre</a>
+  <a href="#">Online Services</a>
+</div>
+
+
+<div>
+  <h2>
+    Calculators
+  </h2>
+  <a href="#">Personal Loan EMI Calculator</a>
+  <a href="#">Car Loans EMI Calculators</a>
+  <a href="#">Two Whellers</a>
+  <a href="#">Fixed Deposits</a>
+  <a href="#">Reccurring Deposits</a>
+</div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0f4c8e;
+            color: white;
+            padding: 5px 20px;
+        }
+
+        .header img {
+            width: 250px;
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .header-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 10px;
+            border: 2px solid black;
+            height: 50px;
+            align-content: center;
+            background-color: #135dad;
+            color: #ddd;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 1px;
+            background-color: #e8e6e6;
+            border: 2px solid rgb(212, 212, 212);
+            height: 40px;
+            font-size: 14px;
+            align-content: center;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #323030;
+        }
+
+        .main {
+            flex-grow: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .main h2 {
+            margin-bottom: 10px;
+        }
+
+        .main .account-summary {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .account-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .account-table th,
+        .account-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .account-table th {
+            background-color: #e9ecef;
+        }
+
+        .account-table .view-button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .account-table .view-button:hover {
+            background-color: #0069d9;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <img src="download.png" alt="logo">
+            </div>
+            <div class="header-nav">
+                <a href="#">Download MobileBanking</a>
+                <a href="#">Insta Alerts</a>
+                <a href="#">SMS Banking Registration</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Change Password</a>
+                <a href="#">Contact Details</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="sidebar">
+                <h2>Accounts</h2>
+                <ul>
+                    <li><a href="#">Transaction</a></li>
+                    <li><a href="#">Funds Transfer</a></li>
+                    <li><a href="#">Open Fixed Deposit < Rs 1 Cr</a>
+                    </li>
+                    <li><a href="#">Open Fixed Deposit > Rs 1 Cr</a></li>
+                    <li><a href="#">CASA Sweepin</a></li>
+                    <li><a href="#">Fixed Deposit Sweep-in</a></li>
+                    <li><a href="#">Super Saver</a></li>
+                    <li><a href="#">Open Recurring Deposit</a></li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <h2>Account Summary</h2>
+
+                <div class="account-summary">
+                    <div class="loan-offer">
+                        <h2>India's first paperless Personal Loan!</h2>
+                        <p>Dear Ayushman Shah,</p>
+                        <p>We offer you a pre-approved paperless Personal Loan!</p>
+                        <button class="apply-now">Apply now</button>
+                        <p>& get money in 12 hours!</p>
+                    </div>
+                </div>
+
+
+
+                <h2>Transactions History</h2>
+                <table class="account-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Narration</th>
+                            <th>Cheque/Ref. No.</th>
+                            <th>Value Date</th>
+                            <th>Withdrawal</th>
+                            <th>Deposit</th>
+                            <th>Closing Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25 Aug 2024</td>
+                            <td>ACH Debit Avdhesh
+                                030122 030122-
+                                MIR2201751155561</td>
+                            <td>MIR2201751155561</td>
+                            <td>25 Aug 2024</td>
+                            <td>590,000.00</td>
+                            <td></td>
+                            <td>6,953,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>24 Aug 2024</td>
+                            <td>ACH Debit Priyanshu Sinha
+                                030122 030122-
+                                MIR2201751156496</td>
+                            <td>MIR2201751156496</td>
+                            <td>24 Aug 2024</td>
+                            <td>1,250,000.00</td>
+                            <td></td>
+                            <td>7,543,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>24 Aug 2024</td>
+                            <td>ACH Debit Kalyan
+                                030122 030122-
+                                MIR2201751156485</td>
+                            <td>MIR2201751156485</td>
+                            <td>24 Aug 2024</td>
+                            <td></td>
+                            <td>2,500,000.00</td>
+                            <td>8,793,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>22 Aug 2024</td>
+                            <td>ACH Debit Nagesh
+                                030122 030122-
+                                MIR2201751153456</td>
+                            <td>MIR2201751153456</td>
+                            <td>22 Aug 2024</td>
+                            <td>1,600,000.00</td>
+                            <td></td>
+                            <td>6,293,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>22 Aug 2024</td>
+                            <td>ACH Debit Shivam 
+                                030122 030122-
+                                MIR2201751157845</td>
+                            <td>MIR2201751157845</td>
+                            <td>22 Aug 2024</td>
+                            <td>1,400,000.00</td>
+                            <td></td>
+                            <td>7,893,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>22 Aug 2024</td>
+                            <td>Creadit by Aman Sharma
+                                030122 030122-
+                                MIR2201751125463</td>
+                            <td>MIR2201751125463</td>
+                            <td>22 Aug 2024</td>
+                            <td></td>
+                            <td>1,500,000.00</td>
+                            <td>9,293,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>22 Aug 2024</td>
+                            <td>ACH Debit Priya Gupta
+                                030122 030122-
+                                MIR2201751121848</td>
+                            <td>MIR2201751121848</td>
+                            <td>22 Aug 2024</td>
+                            <td>1,250,000.00</td>
+                            <td></td>
+                            <td>7,793,576.23</td>
+                        </tr>
+                        <tr>
+                            <td>19 Aug 2024</td>
+                            <td> Creadit to NEERAJ KUMAR SAH-
+                                CIT10000002-
+                                201851663392-Payment from
+                                Phone</td>
+                            <td>201851663392</td>
+                            <td>19 Aug 2024</td>
+                            <td>590,000.00</td>
+                            <td></td>
+                            <td>9,043,576.23</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Note:</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
